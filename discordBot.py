@@ -16,11 +16,8 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f'Merhaba! Ben {bot.user}, bir Discord sohbet botuyum!')
 
-@bot.command()
-async def joined(ctx, member: discord.Member):
-    """ Kişinin ne zaman giriş yaptığını gösterir."""
-    await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
 
+# roll fonksiyonu bizim rastgele bir şekilde zar atmamıza olanak sağlar.
 @bot.command()
 async def roll(ctx, dice: str):
     """Rolls a dice in NdN format."""
